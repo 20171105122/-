@@ -7,9 +7,17 @@
 //
 
 #include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
-}
+struct competitor
+{
+    char name[20];
+    char sex[3];
+    int age;
+    struct competitor *next;
+};
+
+    
+    
+

@@ -14,9 +14,15 @@ struct competitor
 {
     char name[20];
     char sex[3];
-    int age;
+    int studentID;
+    int score;
+    int datebirth;
+    int class;
+    char judge;
+    int phonenumber;
     struct competitor *next;
 };
+
 
     
     

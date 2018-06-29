@@ -18,12 +18,45 @@ struct competitor
     int score;
     int datebirth;
     int class;
-    char judge;
+    char str[10];
     int phonenumber;
     struct competitor *next;
 };
+typedef struct node {
+    int data;
+    struct node *next;
+}node;
 
 
+node *createlink()//从文件中读取数据存入链表
+{
+    node *head =(node*)malloc(sizeof(node));
+    int t;
+    node *p;
+    node *q;
+    p=q=head;
+    FILE * r= fopen("input.txt","r");
+    if(r==NULL)
+    {
+        printf("打开文件失败!");
+        return NULL;
+    }
     
+    while(fscanf(r,"%d",&t)!=EOF)
+    {
+        q= (node*)malloc(sizeof(node));
+        q->data=t;
+        p->next=q;
+        p=q;
+    }
+    p->next=NULL;
+    return head;
+}
+int main()
+{
+    int i;
+    
+    
+}
     
 
